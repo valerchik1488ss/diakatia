@@ -15,6 +15,82 @@
       <link rel="stylesheet" href="access/main.css?662250" type="text/css">
       <link rel="stylesheet" href="access/pro.min.css?662250" type="text/css">
       <title>Дія</title>
+
+
+
+      <style>
+  /* ────────────────────────────────────────────────
+     ДВИЖУЩИЙСЯ ФОН
+  ──────────────────────────────────────────────── */
+  body {
+    background: linear-gradient(-45deg, #667eea, #764ba2, #6b48ff, #a55eea, #89d4cf, #667eea);
+    background-size: 400% 400%;
+    animation: gradientFlow 28s ease infinite;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  @keyframes gradientFlow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ────────────────────────────────────────────────
+     ОСНОВНОЙ КОНТЕЙНЕР ДОКУМЕНТОВ
+  ──────────────────────────────────────────────── */
+  .mainpage.papage {
+    background: rgba(248, 250, 255, 0.82) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* ────────────────────────────────────────────────
+     КАРТОЧКИ ДОКУМЕНТОВ — мягкие углы + тень
+  ──────────────────────────────────────────────── */
+  .swiper-slide.passport .content {
+    border-radius: 34px !important;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18) !important;
+    background: #ffffff;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: all 0.3s ease;
+  }
+
+  .swiper-slide.passport .content:hover {
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24) !important;
+    transform: translateY(-6px);
+  }
+
+  /* Внутренние элементы тоже немного скругляем */
+  .swiper-slide.passport .information,
+  .swiper-slide.passport .ps_title,
+  .swiper-slide.passport .name.fullname,
+  .swiper-slide.passport .razdel + .name {
+    border-radius: 18px;
+  }
+
+  /* QR-блок тоже красивее */
+  .qr_body {
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  /* Убираем острые углы у нижнего бара, если он мешает */
+  .footer.zep {
+    border-radius: 0 0 24px 24px;
+    overflow: hidden;
+  }
+</style>
+
+
+
+
+
+
+
+
+      
    </head>
    <body>
       <div class="loadpage">
